@@ -1,0 +1,104 @@
+      
+.leaderBoard{
+    margin: 0vw auto;
+    width: 100%;
+}
+.leaaderTitle{
+    margin: 0vw auto;
+    width: 97%;
+}
+.leaaderTitle img{
+    width: 100%;
+}
+.leaderBg{
+    margin: -9vw auto;
+    width: 95%;
+    background-image: url(./img/Leaderboard-Bg.png);
+    background-size: 100% 100%;
+    background-position: center;
+    /* height: 147vw; */
+    padding-top: 9vw;
+    padding-bottom: 2vw;
+}
+.rank1Leader{
+    margin: 0vw auto;
+    width: 86%;
+    background-image: url(./img/Leaderboard-Winners-Name-Bg.png);
+    background-size: 100% 100%;
+    background-position: center;
+    display: grid;
+    grid-template-columns: 24% 43.33% 28.33%;
+    height: 16vw;
+    padding-top: 0vw;
+    color: white;
+    margin-bottom: 3vw;
+}
+.gold{
+    margin: 0vw auto;
+    width: 108%;
+    background-image: url(./img/Gold-Frame.png);
+    background-size: 95% 100%;
+    background-repeat: no-repeat;
+    height: 19vw;
+    position: relative;
+    top: -2vw;
+    left: -5vw;
+}
+.rankName{
+    text-align: left;
+    font-size: small;
+    padding-top: 1vw;
+}
+.earnings{
+    text-align: left;
+    padding-top: 3vw;
+    font-size: small;
+}
+.imgSmall{
+    width: 13%;
+}
+.silver{
+    margin: 0vw auto;
+    width: 108%;
+    background-image: url(./img/Sliver-Frame.png);
+    background-size: 95% 100%;
+    background-repeat: no-repeat;
+    height: 19vw;
+    position: relative;
+    top: -2vw;
+    left: -5vw;
+}
+.bronze{
+    margin: 0vw auto;
+    width: 108%;
+    background-image: url(./img/Sliver-Frame.png);
+    background-size: 95% 100%;
+    background-repeat: no-repeat;
+    height: 19vw;
+    position: relative;
+    top: -2vw;
+    left: -5vw;
+}
+.rankLeader{
+    margin: 0vw auto;
+    width: 86%;
+    background-image: url(./img/Leaderboard-Name-Bg.png);
+    background-size: 100% 100%;
+    background-position: center;
+    display: grid;
+    grid-template-columns: 24% 43.33% 28.33%;
+    height: 14vw;
+    padding-top: 0vw;
+    color: white;
+    margin-bottom: 3vw;
+}
+.basic{
+    margin: 0vw auto;
+    width: 50%;
+    background-color: white;
+    border-radius: 50%;
+    height: 10vw;
+    position: relative;
+    top: 3vw;
+    left: -4vw;
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xmas eve 2022 Assets</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="leaderboard.css" />
+</head>
+
+<body id='body'>
+    <div id="modal">
+        <div id="rules">
+            <img src="./img/Rules-Text.png" class="rule-text">
+            <div id="rules-des">
+                <div style="padding-bottom: 5vw;">-If any talent is found not performing in the given slot for a minimum of
+                    24 minutes then they will be disqualified. (Performing their particular category) </div>
+                <div style="padding-bottom: 5vw;" >-Set the camera at an appropriate angle, with perfect background and
+                    Christmas theme.</div>
+                <div style="padding-bottom: 5vw;">-If any of the above rules are not followed, the Streamkar official has
+                    complete right to disqualify the talent from the competition </div>
+                <div style="padding-bottom: 5vw;">-Talents who achieve the target will get exciting rewards.</div>
+            </div>
+        </div>
+        <img src="./img/Close-Btn.png" id="close-btn">
+    </div>
+    <div id="main">
+        <img src="./img/Guide-Btn.png" id="guid-btn">
+        <!----------- header img ------------->
+        <img src='./img/Header.png' style="width: 100vw;">
+        <div id="sub-title"> </div>
+        <!-- reward banner -->
+        <div id="reward-banner">
+            <div id="reward-content">
+                <img src="./img/Rewards-Text.png" class="reward-text">
+                <div id="reward-gift">
+                    <img src="./img/Amazon-Gift-Card.png" style="height: 20vw;" />
+                    <img src="./img/Banner-Display.png" style="height: 20vw;">
+                </div>
+                <div id="reward-des"><span id="target-beans">Beans Target- 2,00,00,000</span>
+                    <img src="./img/Beans-Icon.png" id="beans">
+                </div>
+                <div style="text-align: center;margin-top: 2vw;">
+                    <span class="dot active" id="1" onclick="handleSlideShow(1,2,3)"></span>
+                    <span class="dot" id="2" onclick="handleSlideShow(2,1,3)"></span>
+                    <span class="dot" id="3" onclick="handleSlideShow(3,1,2)"></span>
+                </div>
+                <div id="description">
+                    Amazon Gift Vouchur + In-app Banner[Talent+Agency]
+                </div>
+            </div>
+        </div>
+        <!-- leaderboard banner -->
+        <div class="leaderBoard">
+            <div class="leaaderTitle">
+                <img src="img/Leaderboard-Text.png" alt="">
+            </div>
+            <div class="leaderBg">
+                <div class="rank1Leader">
+                    <div class="gold">
+                        <img src="" alt="">
+                    </div>
+                    <div class="rankName">
+                        <p>Nikhil More <br> ID: <a href="">123552788</a></p>
+                    </div>
+                    <div class="earnings">
+                        <p>126634738 <img src="img/Beans-Icon.png" alt="" class="imgSmall"></p>
+                    </div>
+                </div>
+                <div class="rank1Leader">
+                    <div class="silver">
+                        <img src="" alt="">
+                    </div>
+                    <div class="rankName">
+                        <p>Nikhil More <br> ID: <a href="">123552788</a></p>
+                    </div>
+                    <div class="earnings">
+                        <p>126634738 <img src="img/Beans-Icon.png" alt="" class="imgSmall"></p>
+                    </div>
+                </div>
+                <div class="rank1Leader">
+                    <div class="bronze">
+                        <img src="" alt="">
+                    </div>
+                    <div class="rankName">
+                        <p>Nikhil More <br> ID: <a href="">123552788</a></p>
+                    </div>
+                    <div class="earnings">
+                        <p>126634738 <img src="img/Beans-Icon.png" alt="" class="imgSmall"></p>
+                    </div>
+                </div>
+                <div class="rankLeader">
+                    <div class="basic">
+                        <img src="" alt="">
+                    </div>
+                    <div class="rankName">
+                        <p>Nikhil More <br> ID: <a href="">123552788</a></p>
+                    </div>
+                    <div class="earnings">
+                        <p>126634738 <img src="img/Beans-Icon.png" alt="" class="imgSmall"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">ALL RIGHTS RESERVED BY STREAMKAR </div>
+    </div>
+    <script>
+        const targetInBeans = {
+            1: '2,00,00,000',
+            2: '1,50,00,000',
+            3: '1,00,00,000'
+        }
+        const rewardDescription = {
+            1: 'Amazon Gift Vouchur + In-app Banner[Talent+Agency]',
+            2: 'Amazon Gift Vouchur + webpage mention Agency',
+            3: 'Amazon Gift Vouchur + webpage mention'
+        }
+        var modal = document.getElementById("modal");
+        var guidBtn = document.getElementById("guid-btn");
+        var main = document.getElementById('main');
+        var closeBtn = document.getElementById('close-btn');
+
+        // show guidline on btn click
+        guidBtn.onclick = function () {
+            modal.style.display = "block";
+            main.style.opacity = 0.2;
+            document.getElementById('body').classList.add('body');
+        }
+
+        // hide guidline on close btn click
+        closeBtn.onclick = function () {
+            modal.style.display = "none";
+            main.style.opacity = 1;
+            document.getElementById('body').classList.remove('body');
+        }
+
+        function handleSlideShow(selectedSlideNumber, unSelectedSlide1, unselectedSlide2) {
+            document.getElementById(selectedSlideNumber).classList.add('active');
+            document.getElementById(unSelectedSlide1).classList.remove('active');
+            document.getElementById(unselectedSlide2).classList.remove('active');
+            document.getElementById('target-beans').innerHTML = `Beans Target-${targetInBeans[selectedSlideNumber]}`;
+            document.getElementById('description').innerHTML = rewardDescription[selectedSlideNumber];
+        }
+
+    </script>
+</body>
+
+</html>
